@@ -1,0 +1,267 @@
+/*  tạp base dự án (  phần này khi tạo dự án phải làm đầ tiên ) */
+/* khởi tạo box-sizing: border-box cho toàn bộ dự án ( khi khởi tạo thì
+luôn dùng cái này */
+* {
+  box-sizing: border-box;
+}
+
+/*  đổi cỡ chữ cho toàn bộ html từ 16px sang 10px vì ta dùng đơn vị rem
+ nên đổi sang 10px tính cho dễ vd: 16px = 1.6rem vì lúc này 1rem = 10px
+ chứ không phải 1rem = 16 px như trước */
+html {
+  font-size: 62.5%;
+  /* vì đơn vị rem ăn theo font-size nên phải đổi ở html */
+}
+/* khôi phục lại cỡ chữ */
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==================common================= */
+
+/* độ rộng cho toàn bộ web */
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* thuộc tính chung cho các nút bấm */
+.nth {
+  display: inline-block;
+  min-width: 118px;
+  padding: 0px 16px;
+  line-height: 50px;
+  border-radius: 24.5px;
+  color: #fff;
+  background-color: black;
+}
+
+/* ===================header=============== */
+.header {
+  background: #fffcf4;
+}
+
+/* dữ cho phần header không bị trôi khi lăn chuột */
+.fixed {
+  position: sticky;
+  top: -28px;
+  z-index: 1;
+}
+/* xoay ngang các khối con bên trong body */
+.header .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0px 36px; */
+  padding-top: 36px;
+  text-align: center;
+}
+
+.header .nav ul {
+  display: flex;
+  position: relative;
+}
+
+/*  đẩy các khối từ khối nav sang bên phải */
+.header .nav {
+  margin-left: auto;
+}
+
+/* tác động thẻ a nằm trong khối nav */
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 28px;
+  text-align: center;
+  padding: 0px 21px;
+}
+
+/* tạo hover khi di vào chữ thì in đậm */
+.header .nav li.active a,
+.header .nav a:hover {
+  text-shadow: 1px 0px 0px currentColor;
+}
+
+/* tạo gạch chân cho các thẻ có class active */
+.header .nav li.active a::after {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 2px;
+  left: 21px;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #5f5b53;
+}
+
+/* tạo thuộc tính cho thẻ a có class là nth-header */
+.header .nth-header {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*  tạo khoảng cách giữa khối nth-header với các khối bên trái */
+.header .nth-header {
+  margin-left: 49px;
+}
+
+/* =======================code-hero================== */
+.hero {
+  padding: 65px 0px 64px;
+  background: #fffcf4;
+}
+
+/* tác động css để xoay ngang 2 khối left và right */
+.hero .body {
+  display: flex;
+}
+
+/* ==============hero-left========== */
+.hero .hero-left {
+  position: relative;
+  width: 48%;
+}
+
+.hero .hero-left .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover; /* không bị vỡ ảnh*/
+}
+
+.hero .hero-left .media-block {
+  padding: 24px;
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.hero-left .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-left .item .paragrap {
+  margin-left: 28px;
+}
+
+.hero-left .item .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-left .item .disign {
+  background-color: #fff9e8;
+}
+
+.hero-left .item .develop {
+  background-color: #fcefff;
+}
+
+.hero-left .item .maket {
+  background-color: #ebeaff;
+}
+
+.hero-left .item + .item {
+  margin-top: 22px;
+}
+
+.hero .desc {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  /* line-height: 1.86; 185.714% */
+  line-height: 30px;
+}
+
+.hero .name {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+/* =================hero-right==================== */
+.hero .hero-right {
+  width: 52%;
+  margin-top: 111px;
+  padding-left: 130px;
+}
+
+.hero .hero-right .heading {
+  color: #171100;
+  font-family: Sen;
+  font-size: 5.8rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  line-height: 1.17; /* 117.241% */
+  letter-spacing: -1.16px;
+}
+
+.hero .hero-right .cta-group {
+  display: flex;
+  margin-top: 38px;
+}
+
+.hero .hero-right .Watch-Video {
+  display: flex;
+}
+
+.hero .hero-right .nth-main {
+  background: #ffb900;
+}
+
+.hero .hero-right .Watch-Video {
+  margin-left: 28px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.hero .hero-right .Watch-Video .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-right .Watch-Video .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: 14px;
+  line-height: 1.66; /* 166.667% */
+}
+
+.hero .hero-right .desc:nth-last-child(2) {
+  margin-top: 48px;
+}
+
+.hero .hero-right .desc strong {
+  color: #171100;
+  font-family: Sen;
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.22; /* 122.727% */
+}
+
+.hero .hero-right .desc strong:last-child {
+  margin-left: 28px;
+}
