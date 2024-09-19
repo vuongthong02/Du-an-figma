@@ -518,7 +518,7 @@ a {
   display: flex;
   width: 100%;
 }
-
+/* features-1 */
 /* features-left */
 .features .body .features-left {
   display: flex;
@@ -561,4 +561,234 @@ a {
   text-align: center;
   margin-top: 32px;
   background: #ffb900;
+}
+
+/* features-2 */
+.features-2 .body {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.features-2 .features-right {
+  width: 48%;
+  margin: 71px 0px 0px;
+}
+
+.features-2 .features-left .img {
+  width: 470px;
+  height: 440px;
+}
+/* ===============blogs================ */
+.blogs {
+  margin-top: 200px;
+  background: #fffcf4;
+}
+
+.blogs .body {
+  padding: 96px 0px;
+}
+
+/* blog-top */
+.blogs .blog-top {
+  text-align: center;
+}
+
+.blogs .blog-top .desc {
+  width: 448px;
+  color: #696262;
+  text-align: center;
+  margin: 16px auto 0px;
+  font-size: 1.6rem;
+  line-height: 1.75; /* 175% */
+}
+
+/* blog-bottom */
+.blogs .blog-bottom {
+  display: flex;
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.blogs .blog-bottom .blog-item {
+  width: 33.3%;
+  height: 467px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.blogs .blog-bottom .blog-item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blogs .blog-bottom img {
+  width: 100%;
+  height: 250px;
+  border-radius: 16px 16px 0px 0px;
+  object-fit: cover;
+}
+
+.blog-bottom .content {
+  margin: 20px 20px 28px;
+}
+
+.blog-bottom .date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 12px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.blog-bottom .date::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffb900;
+  margin-right: 4px;
+}
+
+.blog-bottom .date::after {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  content: "";
+  right: -27px;
+  height: 1px;
+  margin-top: 12px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blog-bottom .content .title {
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75px; /* 175% */
+}
+
+.blog-bottom .content .desc {
+  margin-top: 12px;
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+
+.blog-bottom .content .nth-blog {
+  width: 118px;
+  height: 50px;
+  margin-top: 12px;
+}
+
+.blog-bottom .content .nth-blog:hover {
+  background: #ffb900;
+}
+
+.blogs .span {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 38px;
+}
+
+.blogs .span .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #634700;
+  cursor: pointer;
+}
+
+.blogs .span .dot.active {
+  background-color: #ffb900;
+  cursor: default;
+}
+
+/* ========================footer========================== */
+.footer {
+  background: #2e2100;
+  padding-top: 96px;
+}
+
+.footer .footer-top .list-item {
+  width: 21.6%;
+}
+
+.footer .footer-top .list-item:first-child {
+  width: 35%;
+}
+
+/* footer-top */
+.footer .footer-top {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px dotted #59554b;
+}
+
+/* footer-top */
+.footer-top .list-item .logo {
+  margin-bottom: 18px;
+}
+
+.footer-top .list-item:first-child .desc {
+  max-width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer-top .icon {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.footer-top .list-item .title {
+  display: inline-block;
+  width: 130px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 1px solid #59554b;
+  padding-bottom: 14px;
+
+  line-height: 1.75; /* 175% */
+}
+
+.footer-top .list-item ul {
+  margin-top: 28px;
+}
+
+.footer .list-item ul li {
+  margin-top: 12px;
+}
+
+.footer .list-item ul a {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer-top .list-item strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer .list-item ul li:first-child {
+  max-width: 231px;
+}
+
+/* footer-bottom */
+.footer .footer-bottom .desc {
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 28px 0px;
+  line-height: 1.86; /* 185.714% */
 }
